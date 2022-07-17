@@ -15,6 +15,7 @@
     "@emotion/react": "^11.9.3",
     "@emotion/styled": "^11.9.3",
     "@mui/material": "^5.9.0",
+    "axios": "^0.27.2",
     "jotai": "^1.7.5",
     "next": "12.2.2",
     "next-pwa": "^5.5.4",
