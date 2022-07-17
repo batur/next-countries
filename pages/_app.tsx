@@ -8,6 +8,7 @@ import {
   useMediaQuery,
 } from '@mui/material';
 import Head from 'next/head';
+import { Main } from 'layouts';
 
 function MyApp({ Component, pageProps }: AppProps) {
   const isDarkModeEnabled = useMediaQuery('(prefers-color-scheme: dark)');
@@ -30,7 +31,9 @@ function MyApp({ Component, pageProps }: AppProps) {
       <JotaiProvider>
         <ThemeProvider theme={theme}>
           <CssBaseline />
-          <Component {...pageProps} />
+          <Main>
+            <Component {...pageProps} />
+          </Main>
         </ThemeProvider>
       </JotaiProvider>
     </>
