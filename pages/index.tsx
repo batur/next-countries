@@ -1,28 +1,14 @@
 import type { NextPage } from 'next';
 
 import { useAtom } from 'jotai';
-import { count } from 'store';
-import { useEffect } from 'react';
-import { Button, Typography } from '@mui/material';
+import { getAllCountries } from 'store';
 
 const Home: NextPage = () => {
-  const [defaultCount, setCount] = useAtom(count);
+  const [data] = useAtom(getAllCountries);
 
-  useEffect(() => {
-    console.log(defaultCount);
-  }, [defaultCount]);
+  console.log(data);
 
-  function increaseCount() {
-    setCount(defaultCount + 1);
-  }
-  return (
-    <div>
-      <Typography variant="h4" component="h1">
-        {defaultCount}
-      </Typography>
-      <Button onClick={increaseCount}>Increase Count</Button>
-    </div>
-  );
+  return <div></div>;
 };
 
 export default Home;
