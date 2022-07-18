@@ -1,14 +1,13 @@
 import type { NextPage } from 'next';
 
-import { useAtom } from 'jotai';
-import { getAllCountries } from 'store';
+import { Hero } from 'components';
 
 const Home: NextPage = () => {
-  const [data] = useAtom(getAllCountries);
-
-  console.log(data);
-
-  return <div></div>;
+  return (
+    <>
+      <Hero />
+    </>
+  );
 };
 
 export default Home;
