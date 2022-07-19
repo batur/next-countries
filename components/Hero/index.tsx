@@ -1,7 +1,6 @@
 import {
   useTheme,
   Box,
-  Container,
   Typography,
   Link as MuiLink,
   Button,
@@ -16,11 +15,11 @@ const Hero = () => {
 
   return (
     <>
-      <Container
+      <Box
         component="section"
-        maxWidth="lg"
         sx={{
           position: 'fixed',
+          margin: 'auto',
           zIndex: 10,
           width: '100%',
           height: '100vh',
@@ -28,6 +27,8 @@ const Hero = () => {
           alignItems: 'center',
           justifyContent: 'center',
           flexDirection: 'column',
+          left: 0,
+          top: 0,
         }}
       >
         <Button
@@ -41,7 +42,7 @@ const Hero = () => {
         >
           Browse
         </Button>
-      </Container>
+      </Box>
       <Box
         width={'100vw'}
         height={breakpoint ? '100%' : '100vh'}
